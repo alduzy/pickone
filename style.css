@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,600;1,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans";
+}
+
+:root {
+    --color1: #ffc1a0;
+    --color2: #f09f9c;
+    --color3: #c86b98;
+    --color4: #632b6c;
+    --color5: #220f2c;
+    --lightgradient: linear-gradient(150deg, var(--color1) 0%, var(--color3) 100%);
+    --darkgradient: linear-gradient(180deg, var(--color4) 0%, var(--color5) 100%);
+}
+
+body {
+    background: var(--darkgradient);
+    height: 100vh;
+    overflow: hidden;
+}
+
+form {
+    position: fixed;
+    top: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 56px;
+    width: calc(100vw - 96px);
+    max-width: 600px;
+    padding-left: 24px;
+    padding-right: 18px;
+    background-color: white;
+    border-radius: 28px;
+}
+
+input {
+    border: none;
+    height: 56px;
+    width: calc(100% - 40px);
+    font-size: 24px;
+    background: none;
+}
+
+input:focus {
+    outline: none;
+
+}
+
+.addBtn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 36px;
+    color: var(--color4);
+    transition: .2s linear;
+}
+
+.addBtn:hover {
+    color: var(--color2);
+}
+
+.resetBtn {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    background: none;
+    font-size: 20px;
+    text-decoration: underline;
+    color: var(--color2);
+
+}
+
+div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 56px;
+}
+
+h2 {
+    font-size: 36px;
+    color: var(--color2);
+}
+
+.pickBtn {
+    position: fixed;
+    left: 50%;
+    bottom: 48px;
+    transform: translate(-50%, 0);
+    width: calc(100vw - 96px);
+    max-width: 300px;
+    height: 56px;
+    background: var(--lightgradient);
+    border: none;
+    border-radius: 28px;
+    line-height: 56px;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color5);
+    animation: shake 2s ease-in-out infinite;
+}
+
+.pickBtn:hover {
+    animation-play-state: paused;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, -6px);
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+}
+
+span {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: calc(100vw - 96px);
+    max-width: 300px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--color2);
+    transform: translate(-50%, 0) perspective(30px) rotateX(40deg) scale(0.9, 0.4);
+    filter: blur(20px);
+}
