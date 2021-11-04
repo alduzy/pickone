@@ -50,6 +50,10 @@ input:focus {
 
 }
 
+button {
+    cursor: pointer;
+}
+
 .addBtn {
     position: absolute;
     top: 16px;
